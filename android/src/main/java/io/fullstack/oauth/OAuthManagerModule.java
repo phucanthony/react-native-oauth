@@ -409,7 +409,7 @@ class OAuthManagerModule extends ReactContextBaseJavaModule {
     resp.putString("provider", providerName);
     String uuid = (String) accessTokenMap.get("user_id");
     response.putString("uuid", uuid);
-    String oauthTokenSecret = (String) accessTokenMap.get("oauth_token_secret");
+    String oauthTokenSecret = (String) accessToken.getParameter("token_secret");
     
     String tokenType = (String) accessTokenMap.get("token_type");
     if (tokenType == null) {
